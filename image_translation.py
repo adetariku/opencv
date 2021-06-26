@@ -6,6 +6,10 @@
     1. load image
     2. design translation matrix
     3. use the c2.warpAffine function to persorm the translation.
+
+USAGE:  pythpn image_translation.py --image opencv.jpg -x 20 -y 30 
+(to itranslate image opencv.jpg 20 pixels to the right and 30 pixels down.)
+
 """
 
 
