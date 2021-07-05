@@ -7,8 +7,10 @@
     2. design translation matrix
     3. use the c2.warpAffine function to persorm the translation.
 
-USAGE:  pythpn image_translation.py --image opencv.jpg -x 20 -y 30 
+USAGE:  python image_translation.py --image opencv.jpg -x 20 -y 30 
 (to itranslate image opencv.jpg 20 pixels to the right and 30 pixels down.)
+
+REFERENCE: PyImagesearch.com
 
 """
 
@@ -55,7 +57,7 @@ M = np.float32(
 shifted = cv2.warpAffine(image, M, (image.shape[1], image.shape[0]))
 xx = args["shiftx"]
 yy = args["shifty"]
-cv2.putText(shifted, f"svector=({xx}, {yy})",
+cv2.putText(shifted, f"s.vector=({xx}, {yy})",
             (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (255, 0, 0), 1)
 cv2.imshow("Shifted Down and Right", shifted)
 cv2.waitKey(850)
